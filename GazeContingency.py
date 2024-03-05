@@ -156,7 +156,6 @@ class GazeContingency:
                 if isinstance(target, str):
                     self.GotoScreen(target)
                 if isinstance(target, Callable[[]]):
-                    print(f'rule {target} hit!')
                     return target()
         #call all rules coupled to the current screen
         self.screenCurrent.CallRules(time)
